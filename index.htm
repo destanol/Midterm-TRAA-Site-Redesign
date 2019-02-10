@@ -12,10 +12,28 @@
 
         <title>Thames River Anglers Association</title>
     </head>
-    <div class="modal" id="membershipSub">
-        <div>
-                
+    <div class="modal" id="modal-one" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                 <h2>Be a TRAA member for a whole year for only $25</h2>
+     <a href="#modal-one" class="btn-close" aria-hidden="true">×</a>
+    
+            </div>
+            <div class="modal-body">
+                <p>
+                    Your membership also adds another voice to our efforts in protecting and enhancing 
+                    aquatic habitats in the London & area community.Not only does $25.00 get you in 
+                    good standing as a TRAA member, it also includes everyone in your immediate family!
+                    Participate, Help Out, Have Fun and give a little bit back to the Thames River watershed!
+                </p>
+            </div>
+            <div class="modal-footer"> 
+                <a href="#contactUsCon" class="btn">Sign Up</a>
+            </div>
         </div>
+    </div>
+    <div class="wrap"> <a href="#" class="btn btn-big">Modal!</a>
+    
     </div>
     <body id="gridCon">
         <img src="images/river_large.jpg" id="hero" alt="Thames River" height="1080" width="1920">
@@ -56,7 +74,7 @@
                 The TRAA is not a fishing club, although most members are anglers and share 
                 fishing as a common interest. We are a "hands on" environmental group who 
                 likes to work at a grass roots level.
-                <a href="#aboutCon"><span class="button" id="aboutBtn"> Learn More</span></a>
+                <a href="#articleCon"><span class="button" id="aboutBtn"> Learn More</span></a>
             </p>
 
             <div id="aboutImg">
@@ -81,7 +99,7 @@
                 At this time there are still openings those wanting to be a part of the trout hatchery rotation. You can Contact Us or attend a TRAA General Meeting (see above) for more info.
             </p>
 
-            <a href="#articleCon" class="mainArticle"><span class="button" id="eventsBtn"> View More</span></a>
+            <a href="#mapProjectCon" class="mainArticle"><span class="button" id="eventsBtn"> View More</span></a>
 
             </div>
             <aside id="articleFeedCon">
@@ -92,7 +110,7 @@
                             <p class="sm">TRAA Trout Hatchery Brown Trout Eggs Arriving Soon!</p>
                         </li>
                         <li class="smArticleCon">
-                            <img src="images/small-traa-gear.jpg" class="smArticleImg" width="300" height="300" alt="Merchandise Hats Shirts Stickers"> 
+                            <img src="images/small-traa-gear.png" class="smArticleImg" width="300" height="300" alt="Merchandise Hats Shirts Stickers"> 
                             <p class="sm">TRAA Gear is now available! Tee shirts, hats and stickers.</p>
                         </li>
                         <li class="smArticleCon">
@@ -118,59 +136,68 @@
                 The address is 790 Southdale Road East, London, Ontario. 
             </p>
             </div>
-        <h2 class="projectsTitle">
+        <h2 class="projectsTitle" id="donate">
+            <a href="#donate">
             <span class="projectsTitleBg">Fundraising efforts are underway to get the funds we need</span>
             <span class="projectsTitleBg">to continue many of the TRAA's most vital projects.</span>
+            </a>    
         </h2>
         
         <img src="images/river-project.jpg" width="900" height="519" id="projectImg" alt="fishermen tagging fish">
             <div id="projectsCon">
+
             <!-- animated arrow button -->
-                <a href="#projectsTitle" class="viewMore"><img src="images/view-hook.png" id="viewMoreArr" alt="view more">
+                <a href="#projectsTitle" id="viewMore"><img src="images/view-hook.png" id="viewMoreArr" alt="view more">
                   <span class="button" id="viewMoreBtn"> View Projects</span> 
                 </a>
-                <a href="#donate" id="donate">
+                <a href="#contactUs" >
                     <span id="donateBtn" class="button"> Donate Today</span>
                 </a>
             </div>
         </section>
-        <section class="section" id="contactUsCon">
+        <section class="section" id="contactUs">
             <h2>Contact Us</h2>
-            <p>
-                If you're with a like-minded organization or group looking for more information on the TRAA and its activities or if you're an individual who would like to get involved with the activities undertaken by the TRAA.
-                <span>The TRAA would like to hear from you!</span>
+            <div id="contactUsCon">
+                <p>
+                    If you're with a like-minded organization or group looking for more information on the TRAA and its activities or if you're an individual who would like to get involved with the activities undertaken by the TRAA.
+                    <span id="welcome">The TRAA would like to hear from you!</span>
             
-            </p>
-            <div id="formCon">
-                <form action="" autocomplete="off" method="post">
-                    <input    class="formInput" id="name" type="text" name="fullname" placeholder="Name" >
-                    <input    class="formInput" id="subject" type="text" name="subject" placeholder="subject" required>
-                    <textarea class="formInput" id="message" name="message" placeholder="Leave a message" required></textarea>
-                    <input    class="formInput" id="email"type="email" name="email" placeholder="Email">
-                    <input    class="formInput" id="submitBtn" type="submit" value="Submit">
-                </form>
+                </p>
+                <div id="formCon">
+                    <form action="" autocomplete="off" method="post">
+                        <input    class="formInput" id="name" type="text" name="fullname" placeholder="Name" >
+                        <input    class="formInput" id="subject" type="text" name="subject" placeholder="Subject" required>
+                        <textarea class="formInput" id="message" name="message" placeholder="Leave a message" required></textarea>
+                        <input    class="formInput" id="email"type="email" name="email" placeholder="Email">
+                        <input    class="formInput" id="submitBtn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
         </section>
         <section class="section" id="sponserCon">
             <h2 id="sponserHeader"  >Local Businesses Step Up to Help Out the TRAA</h2>
-            <span id="sponserSubhead" >The support of the following local business people is much appreciated</span>
-            <img class="sponserLogo" src="images/logo-melchers.png" alt="Melchers Construction Limited"> 
-            <img class="sponserLogo" src="images/logo-try-recycling.png" alt="Try Recycling Inc">
-            <img class="sponserLogo" src="images/logo-muma.png" alt="Muma Manufacturing">
-            <img class="sponserLogo" src="images/logo-angling-sports-2018.png" alt="Angling Sports">
-            <img class="sponserLogo"` src="images/logo-guilleving-green-tech.png" alt="Guilleving Green Tech">
+            <span id="sponserSubhead">The support of the following local business people is much appreciated</span>
+            <div id="sponserLogoCon">
+                <img class="sponserLogo" src="images/logo-melchers.png"             width="300" height="100" alt="Melchers Construction Limited"> 
+                <img class="sponserLogo" src="images/logo-try-recycling.png"        width="300" height="100" alt="Try Recycling Inc">
+                <img class="sponserLogo" src="images/logo-muma.png"                 width="300" height="100" alt="Muma Manufacturing">
+                <img class="sponserLogo" src="images/logo-angling-sports-2018.png"  width="300" height="100" alt="Angling Sports">
+                <img class="sponserLogo" src="images/logo-guilleving-green-tech.png"width="300" height="100" alt="Guilleving Green Tech">
+            </div>
         </section>
                 <footer id="footerCon">
             <ul class="footerNav" id="footerNavL">
-                <a href="contact.htm"><li>Contact</li></a>
+                <a href="#contactUsCon"><li>Contact</li></a>
                 <li>90 Southdale Road East, London, Ontario</li>
                 <li>Thames Anglers Association, Copyright 2019</li>
             </ul>
             <ul class="footerNav" id="footerNavR">
                 <li><a href="#">Home</a></li>
-                <li><a href="about.htm">About</a></li>
-                <li><a href="events.htm">Events</a></li>
+                <li><a href="#aboutCon">About</a></li>
+                <li><a href="#articleCon">Events</a></li>
+                <li><a href="#donate">Projects</a></li>
                 <li><a href="newsletters.htm">Newsletters</a></li>
-                <li><a href="links.htm">Links</a></li>
+                <li><a href="">Links</a></li>
             </ul>
         </footer>
         <script src="js/main.js"></script>

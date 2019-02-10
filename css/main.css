@@ -31,6 +31,7 @@
       "header header header header header"
       ". main main main ."
       "footer footer footer footer footer";  */
+
  }
 
 .button
@@ -49,6 +50,7 @@
    justify-content: center;
    align-items: center;
    font-size: 1.7rem;
+   transition: color .4s ease;
 }
 
 .section
@@ -68,6 +70,27 @@ a
    text-decoration: none
 }
 
+@media screen and (min-width: 20px) {
+   #articleCon
+   {
+      height: 800vh;
+   }
+
+   #mapProjectCon
+   {
+      height: 700vh;
+   }
+   #mapContent
+   {
+      height: 20vh;
+   }
+   #projectsCon
+   {
+      height: 0vh;
+   }
+}
+
+
 /* END of top level CSS */
 
 /* Modal Styling */
@@ -81,6 +104,102 @@ a
    max-width: 100%;
    height: 500px;
    max-height: 100%;
+}
+
+.btn 
+{
+   background: #428bca;
+   border: #357ebd solid 1px;
+   border-radius: 25px;
+   color: #fff;
+   display: inline-block;
+   font-size: 14px;
+   padding: 8px 15px;
+   text-decoration: none;
+   text-align: center;
+   min-width: 60px;
+   position: relative;
+   transition: color .4s ease;
+}
+
+.btn:hover 
+{
+   background: #357ebd;
+}
+.btn-close 
+{
+   color: #aaaaaa;
+   font-size: 30px;
+   text-decoration: none;
+   position: absolute;
+   right: 5px;
+   top: 0;
+}
+
+.btn-close:hover 
+{
+   color: #919191;
+}
+
+.modal:target:before 
+{
+   display: none;
+}
+
+.modal:before 
+{
+   content:"";
+   display: block;
+   background: rgba(0, 0, 0, 0.6);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 10;
+}
+
+.modal .modal-dialog 
+{
+   background: #fffef0;
+   border: #333333 solid 1px;
+   border-radius: 15px;
+   margin-left: -200px;
+   position: fixed;
+   left: 50%;
+   z-index: 11;
+   width: 500px;
+   -webkit-transform: translate(0, 0);
+   -ms-transform: translate(0, 0);
+   transform: translate(0, 0);
+   -webkit-transition: -webkit-transform 0.4s ease-out;
+   -moz-transition: -moz-transform 0.4s ease-out;
+   -o-transition: -o-transform 0.4s ease-out;
+   transition: transform 0.4s ease-out;
+   top: 20%;
+}
+
+.modal:target .modal-dialog 
+{
+   top: 100%;
+   -webkit-transform: translate(0, 500%);
+   -ms-transform: translate(0, 500%);
+   transform: translate(0, 500%);
+}
+
+.modal-body 
+{
+   padding: 20px;
+}
+
+.modal-header, .modal-footer 
+{
+   padding: 10px 20px;
+}
+
+.modal-footer 
+{
+   text-align: center;
 }
 
 /* END of modal styling */
@@ -153,38 +272,29 @@ nav
    font-size: 1.3rem;
    margin-bottom: 10%;
    border-bottom: #00a984 solid 7px;
+   transition: color .4s ease;
+
 }
 
 #siteNav a li
 {
    text-decoration: none;
-   color:#00a984
-   
+   color:#00a984;
 }
 
 #siteNav a li:hover
 {
    color: #fffef0;
-
+   background-color: #00a984;
+   transition: color .4s ease-out;
 }
 
+/* 
 #siteNav li:hover
 {
    background-color:#00a984;
    color: #fffef0;
-}
-
-#siteNav li a:focus
-{
-   background-color:#ff7777;
-   color: #fffef0;
-}
-
-#siteNav li a:active
-{
-   background-color:#ff7777;
-   color: #fffef0;
-}
+} */
 
 .socialMediaIco
 {
@@ -301,6 +411,13 @@ nav
    z-index: 10;
 }
 
+.aboutBody span:hover
+{
+   color: #fffef0;
+   background-color: #1ca4d8;
+   border-color: #1ca4d8;
+}
+
 
 #aboutImg
 {
@@ -341,12 +458,6 @@ nav
    align-items: center;
 }
 
-@media only screen and (min-width : 1080px) {
-   #articleCon
-   {
-      height: 70vh;
-   }
-}
 
 /* 
  TO BE ANIMATED
@@ -500,12 +611,6 @@ nav
 /* End of Article Section Styling */
 
 
-@media only screen and (min-width : 1080px) {
-   #mapProjectCon
-   {
-      height: 150vh;
-   }
-}
 
 #mapProjectCon
 {
@@ -534,7 +639,7 @@ nav
    grid-column: 2/5;
    font-size: 1.5rem;
    line-height: 1.8rem;
-   height: 40vh;
+   height: 45vh;
    padding: 2%;
    padding-left:15%;
    grid-row: 2/3;
@@ -566,7 +671,7 @@ nav
 
 #mapContent p
 {
-   padding: 0 19% 0 5%
+   padding: 0 19% 0 5%;
 }
 
 .projectsTitle
@@ -580,11 +685,16 @@ nav
    line-height: 2.5rem;
    margin-left: 20%;
    margin-bottom: -4%;
-
+   margin-top: -55px;
+   height: 0px;
+   padding-top: 0px;
+   border-left-style: solid;
+   margin-left: 21%
 }
 
 .projectsTitleBg
 {
+   color: #fff;
    background-color: #ff7777;
    padding-left: 4%;
    padding-right: 3%;
@@ -605,22 +715,24 @@ nav
 {
    grid-column: 3/5;
    grid-row: 4;
-   height: 100vh;
+   height: 80vh;
    display: flex;
-   flex-flow: row-reverse;
-   flex-wrap: wrap;
+   flex-flow: column;
+   justify-content: space-around;
+   align-items: center;
    /* background-color:  rgb(77, 77, 77, .2); */
    max-height: 90%;
    margin: 0% 20% 
 }
 
-.viewMore
+#viewMore
 {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   float: right;
+   margin-left: 600px; 
+   /* float: right; */
    /* margin: 20% 12% */
    /* background-color:rgb(3, 3, 3, .7); */
    max-height: 60%
@@ -629,6 +741,7 @@ nav
 #viewMoreArr
 {
    max-width: 120px;
+   margin-bottom: 10%;
 }
 
 #viewMoreBtn
@@ -642,15 +755,19 @@ nav
 #donate
 {
    /* background-color:rgb(3, 3, 3, .2); */
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   max-height:87%;
-   margin-left: 50px;
+
 }
 
 #donateBtn
 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   justify-self: flex-end;
+   align-items: center;
+   max-height:87%;
+   margin-left: 50px;
+   z-index: 3;
    color: #ff7777;
    border-color: #ff7777;
    padding: 0 50% 0 50%;
@@ -664,31 +781,183 @@ nav
 }
 
 
+#contactUs
+{
+   grid-row: 6/7;
+   margin-top: -11%;
+   height: 88vh;
+   z-index: 0;
+}
+
+#contactUs h2
+{
+   font-family: 'museo-slab', Arial, Helvetica, sans-serif; 
+   font-weight: 900;
+   font-size: 5rem;
+   background-color: #78d0f2;
+   color: #fffef0;
+   padding: 1.5%;
+   padding-left: 2.5%;
+   width: 480px;
+   margin-top: 5%;
+   margin-left: 6%;
+   z-index: 4;
+}
+
 #contactUsCon
 {
-   grid-row: 6/7
+   display:flex;
+   flex-flow: row;
+   justify-content: space-evenly;
+   z-index: 0;
+}
+
+#welcome
+{
+   font-family: museo-slab, Arial, Helvetica, sans-serif; 
+   font-weight: 700;
+   font-size: 2.4rem;
+   color: #78d0f2;
+   text-align: center;
+   line-height: 2.6rem;
+   width: 420px;
+   margin: -15% 0 0 -3%;
+   z-index: 0;
+
 }
 
 
 #contactUsCon p
 {
-   
+   font-family: 'Patrick Hand', Arial, Helvetica, san-serif;
+   font-size: 1.5rem;
+   display: flex;
+   flex-flow: column;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 300px;   
+   line-height: 2rem;
+ 
+   height: 530px;
+   z-index: -1;
+   border-right: 2px solid #6c6c66;
+   margin: -5% 11px 0 10%;
+   padding-right: 100px;
+   /* float: left; */
 }
 
-#formCon
+
+form
 {
+   display: flex;
+   flex-flow: column wrap;
+   width: 450px;
+   height: 500px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 65px;
+   margin-left: 0px;padding-left: 65px;
+   padding-top: 86px;
+   padding-bottom: -37px;height: 409px;
+   margin-bottom: -51px;
+   margin-top: -89px;
 
 }
+
+#formCon input, textarea
+{
+   border-radius: 3px;
+   margin-bottom: 13px;
+}
+
+input
+{
+   width: 360px;
+   border: 1px solid #ccc;
+   padding-left: 10px;
+   font-family: 'lato', sans-serif;
+   margin-left: 15px;
+}
+
+input::placeholder, textarea::placeholder 
+{
+   font-family: 'lato', sans-serif;
+   font-style: italic;
+}
+
+textarea 
+{
+   width: 80%;
+   height: 250px;
+   border: 1px solid #ccc;
+   padding-left: 10px;
+   font-family: 'lato', Arial, Helvetica, sans-serif;
+   margin-left: 15px;
+   line-height: 2rem;
+}
+
+#submitBtn 
+{
+   width: 100px;
+   height: 30px;
+   background: #00a984;
+   color: #fffef0;
+   font-family: 'lato', sans-serif;
+   padding-right: 10px;
+   margin-left: 146px;
+   letter-spacing: 1px;
+   margin-bottom: 0px;
+   border-radius: 25%;
+}
+
 
 #sponserCon
 {
-   max-width: 100vw;
-   
-   grid-row:7/8
-   
+   grid-column: 1/-1;
+   margin-top: 20vh;
+   display: flex;
+   flex-flow: column ;
+   justify-content: flex-start;
+   align-items: center;
+   background-color: #fff;
+   padding-top:3%;
+   height: 60vh;
+}
+
+#sponserHeader 
+{
+   font-family: museo-slab, Arial, Helvetica, sans-serif; 
+   font-weight: 700;
+   font-size: 2.5rem;
+   color: #00a984;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width:100%;
+   margin-bottom: .5%
+}
+
+#sponserSubhead
+{
+   width: 80%;
+   padding: 1% 0 1% 0;
+   background-color: #00a984;
+   color:#fffef0;
+   font-family: 'Patrick Hand', Arial, Helvetica, san-serif;
+   font-size: 1.5rem;
+   text-align: center
+}
+
+#sponserLogoCon
+{
+   width: 900px;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+
 }
 
 .sponserLogo
 {
- max-width: 200px;
+   margin-top:4%
 }
