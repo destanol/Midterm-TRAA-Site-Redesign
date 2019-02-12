@@ -6,8 +6,8 @@
    font-family: museo-slab, serif; 
       font-weight: 300, 700, 900;
 
-   font-family: 'Lato', sans-serif;
-      font-weight: 300, 400, 400i;
+   font-family: 'Work+Sans', sans-serif;
+      font-weight: 400,500;
 
    font-family: 'Patrick Hand', san-serif;
       Small Caps
@@ -18,7 +18,7 @@
 
  .hidden 
  {
-    display: none;
+   display:none;
  }
 
  #gridCon
@@ -44,7 +44,6 @@
 {
    border-radius: 50px;
    border: #9bbe4b solid 5px;
-   height: 40px;
    width: 200px;
    color: #9bbe4b;  
    font-family: museo-slab, serif;
@@ -96,7 +95,7 @@ a
 {
    text-decoration: none
 }
-
+/* 
 @media screen and (min-width: 20px) {
    #articleCon
    {
@@ -115,7 +114,7 @@ a
    {
       height: 0vh;
    }
-}
+} */
 
 
 /* END of top level CSS */
@@ -149,18 +148,16 @@ a
 #logoCon
 {
    width:230px;
-   margin-top: 15%;
-   margin-left: 5%;
+   margin-top: 16%;
+   margin-left: 10%;
    border-radius: 100%;
    z-index: 4;
-
 }
 
 #logoCon img
 {
    width: 100%;
    height: auto;
-
 }
 
 #hero
@@ -189,31 +186,47 @@ nav
    display: flex;
    flex-flow: row wrap;
    justify-content: space-around;
-   width: 60%;
-   margin-top: 16%;
+   align-content: flex-end;
+   margin-top: 10rem;
+   width: 70%;
+   margin-right:10%;
 }
 
 .navItem
 {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
    padding: 5px 20px 3px 18px;
-   background-color: #fffef0;
-   margin-left: 20px;
    font-family: museo-slab, Arial, Helvetica, sans-serif;
    font-weight: 700;
    font-size: 1.3rem;
    margin-bottom: 10%;
-   border-bottom: #9bbe4b solid 7px;
-   transition: color .4s ease;
+   border-bottom: #9bbe4b solid 3px;
+   transition-property: color background-color;
    text-decoration: none;
    color:#606060;
+   background-color: #fffef0;
+   border-radius: 2px;
 }
 
 .navItem:hover
 {
-   color: #fffef0;
    background-color: #9bbe4b;
-   transition: color .4s ease-out;
+   color: #fffef0;
+   transition: color 500ms cubic-bezier(.79,.14,.15,.86);   
+   -moz-transition: color 500ms cubic-bezier(.79,.14,.15,.86);   
+   -webkit-transition: color 500ms cubic-bezier(.79,.14,.15,.86);   
+   transition: background-color 700ms cubic-bezier(.79,.14,.15,.86);
+   -moz-transition: background-color 700ms cubic-bezier(.79,.14,.15,.86);
+   -webkit-transition: background-color 700ms cubic-bezier(.79,.14,.15,.86);
 }
+
+.navItem:active
+   {
+      color: #fffef0;
+      background-color: #9bbe4b;
+   }
 
 #socialMedia
 {
@@ -230,7 +243,6 @@ nav
    max-width: 25px;
    height: auto;
    padding: 0 10px 0 10px
-
 }
 
 .missionStatement
@@ -253,7 +265,12 @@ nav
    font-family: museo-slab, Arial, Helvetica, san-serif;
    width: 45rem;
    z-index: 3;
-   max-height: 330px
+   padding-right: 17px;
+   padding-left: 19px;
+   margin-right: -106px;
+   padding-top: 7px;
+   max-height: 140px;
+   margin-top: 71vh;
 }
 
 #msSubhead
@@ -382,8 +399,8 @@ nav
     display: grid;
     /* grid-template-columns: 20% 55% 25%; */
     grid-template-columns:  1fr 300px 600px 300px 1fr;
-    grid-template-rows: 100px auto  1fr;
-    height: 105vh;
+    grid-template-rows: 20vh 80vh  4vh;
+    height: 104vh;
     background-color: #fffef0;
     grid-column: 1/-1;
     z-index: 3;
@@ -393,16 +410,16 @@ nav
 #mainArticleCon
 {
    grid-column: 3/4;
-   grid-row: 1/3;
+   grid-row: 1/2;
    display: flex;
-   flex-direction: column;
+   flex-flow: row wrap;
    font-family: museo-slab, Arial, Helvetica, san-serif;
    font-weight: 500;
    margin: 5% 4% 0 0;
    /* width: 50%;
    margin: 5rem; */
-   display: flex;
-   align-items: center;
+   align-items: flex-start;
+   justify-content: center
 }
 
 
@@ -432,20 +449,36 @@ nav
 {
    color: white;
    background-color: #9bbe4b;
-   padding: 1% 5% .9% 3%;
+   padding: 1% 4% 1% 3%;
    font-size: 1.2rem;
-   padding-right: 10%;
 }
 
 .mainArticle p
 {
+   padding-top: 1rem;
+   margin: 0 10% 0 10%;
    grid-column: 2;
-   margin: 7% 7% 9% 7%;
-   font-family: 'lato', Arial, Helvetica, sans-serif;
+   font-family: 'Work-Sans', Arial, Helvetica, sans-serif;
    line-height: 1.6rem;
-   font-size: 1.2rem;
+   font-size: .9rem;
+   font-weight: 400;
+   text-align: justify;
+   text-justify: newspaper;
+}
+
+.mainArticle p:nth-of-type(1n+2)
+{
+   text-indent: 6%;  
+   padding-top: 1rem;
+}
+
+.mainArticle p:last-of-type
+{
+   padding-bottom: 2rem;
 
 }
+
+
 
 #eventsBtn
 {
@@ -459,9 +492,11 @@ nav
    justify-content: center;
    align-items: center;
    font-weight: 700;
-   font-size: 1.7rem;
-
+   font-size: 1.5em;
+   margin-top: 5%;
    /* background-color:; */
+   margin-bottom: 5%;
+
 } 
 
 #eventsBtn:hover
@@ -482,21 +517,22 @@ nav
 
 #articleFeedHead
 {
-   margin-top: 15%;
+   margin: 15% 0 10% 0;
+  padding-right: 11px;
    padding-bottom: 3%;
-   font-family: museo-slab, Arial, Helvetica, san-serif;;
+   font-family:'museo-slab', Arial, Helvetica, san-serif;;
    font-weight: 700;
    font-size: 1.4rem;
    border-bottom: #9bbe4b solid 8px; 
-   margin-bottom: 6%
+   text-align:right;
+   
 }
 #articleFeed
 {
-   
    display: flex;
    flex-flow: column;
-   /* justify-content: center;
-   align-items: center; */
+   justify-content: flex-start;
+   align-items: flex-start;
 }
 
 .smArticleCon
@@ -505,27 +541,32 @@ nav
    flex-flow: row;
    justify-content: space-around;
    width: 100%;
-   margin-bottom: 3%
    /* height: 300px; */
 }
 
 .smArticleImg
 {
-   height: 150px;
-   width: 150px
+   height: 130px;
+   width: auto;
+   margin-left: 5%;
 }
 
 .sm
 {
    z-index: 2;
    margin-top: 3%;
-   margin-bottom: 10%;
-   font-family: museo-slab, Arial, Helvetica, san-serif;;
-   font-weight: 500;
-   font-size: 1.2rem;
-   line-height: 1.4rem;
-   margin: 3% 0 0 4%;
+   font-family: 'work-sans', Arial, Helvetica, san-serif;;
+   font-weight: 400;
+   font-size: .9rem;
+   line-height: 1.1rem;
+   margin: 3% 8% 0 4%;
    max-height: 150px;
+}
+
+.sm::first-line
+{
+   font-size: 1.2rem;
+   font-weight: 500;
 }
 
 /* 
@@ -561,11 +602,10 @@ nav
 {
    font-family: 'Patrick Hand', Arial, Helvetica, san-serif;
    /* background-color: #fffef0; */
-   height:120vh;
+   height:180vh;
    grid-column: 1/-1;
    grid-row: 5/6;
    grid-template-rows: min-content auto;
-   height: 144vh;
 
 }
 
@@ -618,10 +658,10 @@ nav
    color: #fffef0;
    font-size: 2rem;
    max-width: 65%;
-   line-height: 2.74rem;
+   line-height: 2.5rem;
    margin-left: 20%;
    margin-bottom: -4%;
-   margin-top: -55px;
+   margin-top: -65px;
    height: 0px;
    padding-top: 0px;
    border-left-style: solid;
@@ -633,10 +673,11 @@ nav
 .projectsTitleBg
 {
    color: #fff;
-   background-color: #ff7777;
+   background-color: #9bbe4b;
    padding-left: 4%;
    padding-right: 3%;
    z-index: 3;
+   margin-right: 10px;
 }
 
 #projectImg
@@ -650,63 +691,130 @@ nav
 
 #projectsCon
 {
-   grid-column: 3/5;
+   grid-column: 4/5;
    grid-row: 2;
-   height: 80vh;
+   height:auto;
+   max-height: 100vh;
    display: flex;
    flex-flow: column;
-   justify-content: space-around;
+   justify-content: space-evenly;
    align-items: center;
    /* background-color:  rgb(77, 77, 77, .2); */
-   max-height: 90%;
-   margin: 0% 20% 
+}
+
+
+#projectText
+{
+   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+   line-height: 1.2rem;
+   font-size: 1rem;
+   width: 500px;
+   margin-top: 30%;
+   margin-bottom: 10%;
+   color: #101010;
+}
+
+#projectText h2
+{
+   font-family: 'museo-slab', Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   font-size: 2rem;
+   line-height: 1.7rem;
+   text-align: right;
+   width: auto;
+   padding:1%;
+   max-width: 230px;
+   float: right;
+   background-color: #9bbe4b;
+   color:  #fffef0
+}
+
+#projectText p
+{
+   margin-left: 5%;
+   margin-right: 1%;
+   float: left;
+   height: 166px;
+   width: 222px;
+   text-align: justify;
+   text-justify: inter-cluster;
+   line-height: 1.2rem;
+   margin-top:69px;
 }
 
 #viewMore
 {
+   box-sizing: border-box;
+   border-bottom: #ff7777 solid 0;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin-left: 515px; 
+   width: 220px;
+   height: auto;
    /* float: right; */
    /* margin: 20% 12% */
    /* background-color:rgb(3, 3, 3, .7); */
-   max-height: 60%
 }
 
 #viewMoreArr
 {
-   max-width: 120px;
+   width: 110px;
+   height: auto;
    margin-bottom: 10%;
+   z-index: 100;
 }
 
 #viewMoreBtn
 {
+   box-sizing: border-box;
    color: #ff7777;
-   border-style: none;
    border-radius: 0;
-   border-bottom: #ff7777 solid 7px
+   font-family: museo-slab, serif;
+   font-weight: 700;
+   font-size: 1.5rem;
+   height: 40px;
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
+#viewMore:hover
+{
+   border-bottom: #ff7777 solid 9px;
+   transition: border-bottom .3s ease-out;
+   -moz-transition: border-bottom .4s ease;
+   -webkit-transition: border-bottom .4s ease;
+}
+
+#donateCon
+{
+   grid-column: 2/3;
+   grid-row: -1;
+   display: flex;
+   flex-flow: row;
+       flex-direction: row;
+       flex-wrap: nowrap;
+   justify-content: center;
+   align-items: stretch;
+   margin-left: 500px;
+   margin-bottom: 110px;
+
+}
+
 
 #donateBtn
 {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   justify-self: flex-end;
-   align-items: center;
-   max-height:87%;
-   margin-left: 50px;
-   z-index: 3;
    color: #ff7777;
-   border-color: #ff7777;
-   padding: 0 50% 0 50%;
-   margin-right: 40%;
+   width: 400px;
+   border: #ff7777 solid 5px;
 }
 
 #donateBtn:hover
 {
+   transition: color .4s ease;
+   transition: background-color .4s ease;
    color: #fffef0;
    background-color: #ff7777;
 }
@@ -728,10 +836,10 @@ nav
    background-color: #78d0f2;
    color: #fffef0;
    padding: 1.5%;
-   padding-left: 2.5%;
+   padding-left: 5%;
+   padding-right: 5%;
    width: 480px;
-   margin-top: 5%;
-   margin-left: 6%;
+   margin-left: 16%;
    z-index: 4;
 }
 
@@ -803,13 +911,13 @@ input
    width: 360px;
    border: 1px solid #ccc;
    padding-left: 10px;
-   font-family: 'lato', sans-serif;
+   font-family: 'Work-Sans', sans-serif;
    margin-left: 15px;
 }
 
 input::placeholder, textarea::placeholder 
 {
-   font-family: 'lato', sans-serif;
+   font-family: 'Work-Sans', sans-serif;
    font-style: italic;
 }
 
@@ -819,7 +927,7 @@ textarea
    height: 191px;
    border: 1px solid #ccc;
    padding-left: 10px;
-   font-family: 'lato', Arial, Helvetica, sans-serif;
+   font-family: 'WorkSans', Arial, Helvetica, sans-serif;
    margin-left: 15px;
    line-height: 2rem;
 }
@@ -843,7 +951,6 @@ textarea
 {
    background: #9bbe4b;
    color: #fffef0;
-
 }
 
 #sponserCon

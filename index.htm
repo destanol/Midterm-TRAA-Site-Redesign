@@ -7,29 +7,62 @@
         <link href="css/reset.css" rel="stylesheet" type="text/css">
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <link href="css/footer.css" rel="stylesheet" type="text/css">
+        <link href="css/modal.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.typekit.net/yxy4lwb.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i&#124;Patrick+Hand&#124;Patrick+Hand+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&#124;Patrick+Hand&#124;Patrick+Hand+SC" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <title>Thames River Anglers Association</title>
-        
     </head>
     <body id="gridCon">
+
+
+<!-- Modal stuff  -->
+<!-- 
+
+
+        <div class="curtain hidden"></div>
+        <div class="modal">
+            <h1> 
+                Be apart of the solution, become a member of the Thames River Anglers Association for only $25 dollars.
+            </h1>
+            <p>
+                Participate, Help Out, Have Fun and give a little bit back to the Thames River watershed!
+                Proceeds go toward continuing many of the TRAA's most vital environmental projects.
+                Your membership also adds another voice to our efforts in protecting and enhancing aquatic habitats in the London & area community. 
+                Membership also includes everyone in your immediate family!
+                Participate, Help Out, Have Fun and give a little bit back to the Thames River watershed!
+
+                To join, attend a TRAA event or email us for other options.
+            </p>
+            <div class="modalActions">
+                <button type="button" class="btn-comfirm"> Contact Us </button>
+                <button type="button" class="btn-cancel"> Close </button>
+            </div>
+
+        </div> -->
+
+
+<!-- END of Modal stuff  -->
+
+
         <img class="boxShadow" src="images/river_large.jpg" id="hero" alt="Thames River" height="1080" width="1920">
         <header id="header">
         <div id="headerCon">
 
-
             <h1 class="hidden" id="modal-one">Thames River Anglers Association</h1>
-            <div id="logoCon" class="boxShadow" >
+            <div id="logoCon" class="boxShadowLow" >
+                <a href="index.htm">
             <img src="images/logo-traa-320x.png" id="logoMain" height="280" width="280" alt="Thames River Anglers Association Logo">
+                </a>    
             </div>
             <nav>
                 <ul id="siteNav">
-                    <a href="#header">      <li class="navItem boxShadow">Home      </li></a>
+                    <a href="#">            <li class="navItem boxShadow">Home      </li></a>
                     <a href="#aboutCon">    <li class="navItem boxShadow">About     </li></a>
                     <a href="#articleCon">  <li class="navItem boxShadow">Events    </li></a>
                     <a href="#projectsCon"> <li class="navItem boxShadow">Projects  </li></a>
-                    <a href="#footerCon">    <li class="navItem boxShadow">Links     </li></a>
+                    <a href="#footerCon">   <li class="navItem boxShadow">Links     </li></a>
                     <a href="#contactUsCon"><li class="navItem boxShadow">Contact Us</li></a>
                     <li>
                         <ul id="socialMedia">
@@ -45,7 +78,8 @@
         </header>
             <!-- Pull Statements -->
         <h2 class="missionStatement boxShadow" id="msHead">Dedication Today For A Better Tomorrow </h2>
-        <span class="missionStatement" id="msSubhead">
+        <span class="missionStatement" id="msSubhead" data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
             <span class="msSubheadBg boxShadowLow">"For the enhancement, protection and</span>	
             <span class="msSubheadBg boxShadowLow">promotion of a viable, multi-species fishery </span> 
             <span class="msSubheadBg boxShadowLow">within the Thames Riverwaters.”</span> 
@@ -73,12 +107,16 @@
             <div class="mainArticle" id="mainArticleCon">
             <h2 class="mainArticle" id="ArticleTitle"> Rod Building - Your First Time </h2>
             <span class="mainArticle" id="ArticleSubhead"> 7:00PM - Mondays, February 18 through March 11, 2019</span>
-            <p  class="mainArticle"> 
+            <p  id="articleTextBlock"> 
                 This will be a series of informal, hands-on sessions that will result in a spinning or fly rod that you have assembled and finished yourself.
                 This opportunity is open only to current members of the TRAA, WOFGPA and/or FCFFC. Registration will be closed when 15 paid-up participants have registered, or January 11, 2019, whichever comes first.
+            </p>
+            <p>
                 An email with further details has been sent out. If you haven't received this email by Wednesday, December 19th, please Contact Us.
                 Presented by: Thames River Anglers Association with the Western Ontario Fish & Game Protective Association and the Forest City Fly Fishing Club.
                 The Western Ontario Fish & Game Protective Association clubhouse is at 790 Southdale Road, London Ontario.   
+            </p>
+            <p>
                 At this time there are still openings those wanting to be a part of the trout hatchery rotation. You can Contact Us or attend a TRAA General Meeting (see above) for more info.
             </p>
 
@@ -90,7 +128,7 @@
                     <ul id="articleFeed">
                         <li class="smArticleCon">
                             <img src="images/small-trout-eggs.jpg" class="smArticleImg" width="300" height="300" alt="Trout Hatchery Brown Trout Eggs"> 
-                            <p class="sm">TRAA Trout Hatchery Brown Trout Eggs Arriving Soon!</p>
+                            <p class="sm">TRAA Trout Hatchery, Brown Trout Eggs Arriving Soon!</p>
                         </li>
                         <li class="smArticleCon">
                             <img src="images/small-traa-gear.png" class="smArticleImg" width="300" height="300" alt="Merchandise Hats Shirts Stickers"> 
@@ -129,23 +167,43 @@
         
         <img src="images/river-project.jpg" width="900" height="519" id="projectImg" alt="fishermen tagging fish">
             <div id="projectsCon">
+                <div id="projectText">
+                    <h2>
+                        The TRAA Salmonid Monitoring Program
+                    </h2>
+                    <p>Jon George, a marine biologist from Thunder Bay
+                            who is helping us out with this project, compiled
+                            the comparative results of the first three years of 
+                            a seven year long survey, in an easy-to-understand report. 
+                        </p>
+                    </div>
 
             <!-- animated arrow button -->
-                <a href="#projectsTitle" id="viewMore"><img src="images/view-hook.png" id="viewMoreArr" alt="view more">
-                  <span class="button" id="viewMoreBtn"> View Projects</span> 
+                <a href="#projectsTitle" id="viewMore">    
+                    <img data-aos="fade-right" 
+                    data-aos-anchor-placement="bottom-bottom" 
+                    data-aos-easing="ease-in-sine" 
+                    src="images/view-hook.png" id="viewMoreArr" alt="view more" width="322" height="454" > 
+                  <p id="viewMoreBtn"> View Projects</p> 
                 </a>
-                <a href="#contactUs" >
-                    <span id="donateBtn" class="button"> Donate Today</span>
-                </a>
+                
+            </div>
+            <div id="donateCon">
+            <a href="#contactUs">
+                <span  id="donateBtn" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="button"> Donate Today</span>
+            </a>
             </div>
         </section>
         <section class="section" id="contactUs">
-            <h2>Contact Us</h2>
+            <h2 
+            data-aos="fade-up" data-aos-anchor-placement="bottom-center" 
+            data-aos-easing="ease-in-back"
+            data-aos-duration="500">
+                Contact Us</h2>
             <div id="contactUsCon">
                 <p>
                     If you're with a like-minded organization or group looking for more information on the TRAA and its activities or if you're an individual who would like to get involved with the activities undertaken by the TRAA.
                     <span id="welcome">The TRAA would like to hear from you!</span>
-            
                 </p>
                 <div id="formCon">
                     <form action="" autocomplete="off" method="post">
@@ -162,11 +220,11 @@
             <h2 id="sponserHeader"  >Local Businesses Step Up to Help Out the TRAA</h2>
             <span id="sponserSubhead">The support of the following local business people is much appreciated</span>
             <div id="sponserLogoCon">
-                <img class="sponserLogo" src="images/logo-melchers.png"             width="300" height="100" alt="Melchers Construction Limited"> 
-                <img class="sponserLogo" src="images/logo-try-recycling.png"        width="300" height="100" alt="Try Recycling Inc">
-                <img class="sponserLogo" src="images/logo-muma.png"                 width="300" height="100" alt="Muma Manufacturing">
-                <img class="sponserLogo" src="images/logo-angling-sports-2018.png"  width="300" height="100" alt="Angling Sports">
-                <img class="sponserLogo" src="images/logo-guilleving-green-tech.png"width="300" height="100" alt="Guilleving Green Tech">
+                <a href="https://www.melchersconstruction.com/"> <img class="sponserLogo" src="images/logo-melchers.png"             width="300" height="100" alt="Melchers Construction Limited">   </a>
+                <a href="http://tryrecycling.com/"> <img class="sponserLogo" src="images/logo-try-recycling.png"        width="300" height="100" alt="Try Recycling Inc">   </a>
+                <a href="http://www.mumamanufacturing.com/"> <img class="sponserLogo" src="images/logo-muma.png"                 width="300" height="100" alt="Muma Manufacturing">  </a>
+                <a href="https://anglingsports.ca/"> <img class="sponserLogo" src="images/logo-angling-sports-2018.png"  width="300" height="100" alt="Angling Sports">  </a>
+                <a href="https://www.guillevingreentech.com/"> <img class="sponserLogo" src="images/logo-guilleving-green-tech.png"width="300" height="100" alt="Guilleving Green Tech">   </a>
             </div>
         </section>
                 <footer id="footerCon">
@@ -185,5 +243,15 @@
             </ul>
         </footer>
         <script src="js/main.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
     </body>
     </html>
+
+
+
+
+
+
