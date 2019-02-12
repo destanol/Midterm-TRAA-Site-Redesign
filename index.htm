@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="css/reset.css" rel="stylesheet" type="text/css">
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="css/footer.css" rel="stylesheet" type="text/css">
-        <link href="css/modal.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.typekit.net/yxy4lwb.css">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&#124;Patrick+Hand&#124;Patrick+Hand+SC" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="css/modal.css" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/footer.css" rel="stylesheet" type="text/css">
 
         <title>Thames River Anglers Association</title>
     </head>
@@ -18,29 +18,31 @@
 
 
 <!-- Modal stuff  -->
-<!-- 
 
 
-        <div class="curtain hidden"></div>
-        <div class="modal">
+
+        <div class="curtain"></div>
+        <div class="modalWrap"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500">
+        <div class="boxShadow modal">
             <h1> 
-                Be apart of the solution, become a member of the Thames River Anglers Association for only $25 dollars.
+                Be a part of the solution, <br> become a member of the Thames River Anglers Association for only $25.
             </h1>
+            <button class="close" onclick="closeModal()">x</button>
+
             <p>
-                Participate, Help Out, Have Fun and give a little bit back to the Thames River watershed!
                 Proceeds go toward continuing many of the TRAA's most vital environmental projects.
                 Your membership also adds another voice to our efforts in protecting and enhancing aquatic habitats in the London & area community. 
-                Membership also includes everyone in your immediate family!
+                <!-- Membership also includes everyone in your immediate family! -->
                 Participate, Help Out, Have Fun and give a little bit back to the Thames River watershed!
-
+                    <br><br>
                 To join, attend a TRAA event or email us for other options.
             </p>
-            <div class="modalActions">
-                <button type="button" class="btn-comfirm"> Contact Us </button>
-                <button type="button" class="btn-cancel"> Close </button>
-            </div>
-
-        </div> -->
+            <a href="#contactUs"><button type="button" class="close" onclick="closeModal()"  > Tell Me More </button></a>
+        </div>
+        </div>
 
 
 <!-- END of Modal stuff  -->

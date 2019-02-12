@@ -1,12 +1,113 @@
-.modal
+.curtain
 {
-    /* display: none; Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9000; /* Sit on top */
+    display: none
+}
+
+
+.modalWrap
+{
+    position: fixed;
+    z-index: 30;
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%;
-    overflow: auto; 
+    grid-column: 1/1;
+    grid-row: 1;
+    padding-top: 17vh;
+    /* background-color: orange;
+    opacity: 0.6; */
 }
 
+.modal
+{
+    display: flex;
+    background-image: url(../images/tex-worn_dots.png);
+    background-repeat:  repeat;
+    border-bottom: #9bbe4b solid 6px;
+    border-right: #9bbe4b solid 4px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    margin: 3% 30% 5% 30%;
+    height: 480px;
+    width: auto;
+    padding: 40px;
+    align-items: center;
+    flex-flow: row wrap;
+    font-family: 'patrick hand','work+sans', Arial, Helvetica, sans-serif;
+    font-size:1.1rem;
+    line-height: 1.4rem;
+    color: #404040
+}
+.modal h1
+{
+    display: inline-block;
+    width: 94%;
+    font-family: 'Patrick Hand SC', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.modal p
+{
+    padding: 0 15% 3% 4%;
+}
+
+.close
+{
+    cursor: pointer;
+    display: inline-block;
+    width: 6%;
+    height: 30px;
+    background-color: rgb(0, 0, 0, 0);
+    border-style: none;
+    align-content: center;
+    font-family: museo-slab, Arial, Helvetica, sans-serif;
+    -webkit-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition:         all 500ms cubic-bezier(0.075, 0.82, 0.165, 1); 
+    opacity: .5;
+}
+.close:hover
+{
+    opacity: 1;
+    -webkit-transition: all 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition:         all 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.modal button
+{
+    font-size: 2.2rem;
+    margin-top: -146px;
+    margin-right: -70px;
+    font-weight: 700;
+    padding-right: 30px;
+    padding-bottom: 42px;
+    
+}
+
+
+.modal a button
+{
+    border-bottom: 5px solid #9bbe4b;
+    width: 270px;
+    height: 33px;
+    color: #9bbe4b;
+    font-family: museo-slab, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    padding-top: 4%;
+    padding-bottom: 30px;
+    margin-left: 53px;
+    -webkit-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition:         all 500ms cubic-bezier(0.075, 0.82, 0.165, 1); 
+    opacity: 1;
+
+}
+
+.modal a button:hover
+{
+    background-color:#9bbe4b;
+    color: #fffef0;
+    -webkit-transition: all 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition:         all 900ms cubic-bezier(0.075, 0.82, 0.165, 1); 
+
+}

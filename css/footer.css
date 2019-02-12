@@ -52,8 +52,6 @@
     margin-left: 30px;
     height:160px;
     margin-right: 10%
-
-
 }
 
 #footerNavR li
@@ -69,6 +67,5 @@ li
 a
 {
     text-decoration: none;
-    font-style: none;
     color: #fffef0
 }

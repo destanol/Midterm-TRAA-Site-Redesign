@@ -10,4 +10,3 @@ Primary Goals of the Redesign:
 
 Secondary Goals:
 -Give appreciation to sponsorships
-
